@@ -1,7 +1,7 @@
 # **2025-OBJPROG-LAB006**
-Week 02 - Introduction to Java Programming
+Week 03-04 - Conditional and Looping Statements
 
-Laboratory # 06 - Guided Coding Exercise: Integrated Exercise – Circle Calculator
+Laboratory # 08 - Guided Coding Exercise: Selection Statements
 
 ## **Instructions**
 
