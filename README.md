@@ -86,6 +86,14 @@ Only perform this if this is the first time you will setup your Git Environment
    **File Naming Convention:**
    - `BooleanExpressionsDemo.java`
 
+   **Desired Output (with score = 82):**
+   ```txt
+   You passed the exam!
+   Keep improving!
+   Grade: B
+   Multi-way Grade: B
+   ```
+
    **Notable Observations (to be discussed after completing the exercise):**
    - Pay attention to the different outputs produced by each type of if statement.
    - Notice how the nested if and the multi-way if-else chain achieve a similar grading result but use different logic structures.
