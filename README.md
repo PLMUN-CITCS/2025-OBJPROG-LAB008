@@ -1,7 +1,7 @@
-# **2025-OBJPROG-LAB006**
+# **2025-OBJPROG-LAB008**
 Week 03-04 - Conditional and Looping Statements
 
-Laboratory # 08 - Guided Coding Exercise: Selection Statements
+Laboratory # 08 - Guided Coding Exercise 2: Selection Statements
 
 ## **Instructions**
 
@@ -77,101 +77,117 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Laboratory # 06 - Guided Coding Exercise: Integrated Exercise – Circle Calculator**
+**Laboratory # 08 - Guided Coding Exercise 2: Selection Statements**
 
    **Objective:**
-   - Combine variable declarations, input/output, arithmetic expressions, operator precedence, type casting, and the Java `Math` API.
-   - Calculate the area and circumference of a circle given a user-input radius.
+   - Implement various forms of selection control.
+   - Practice one-way if, two-way if-else, nested if, and multi-way if-else statements.
 
    **File Naming Convention:**
-   - `CircleCalculator.java`
+   - `BooleanExpressionsDemo.java`
 
    **Notable Observations (to be discussed after completing the exercise):**
-   - Integrated Exercise: This is an integrated exercise. It shows how the different Java concepts you've learned work together to solve a practical problem. This is a big step in learning to program.
-   - Math.PI: The use of Math.PI is a good example of using predefined constants in Java. It's much better than hardcoding a value for pi.
-   - Math.pow(): The exercise reinforces the use of Math.pow() for calculations involving exponents.
-   - Formatted Output: The emphasis on using System.out.printf() for formatted output is important. Clear, well-formatted output is essential for user-friendly programs.
-   - Problem Decomposition: The step-by-step instructions break the problem down into smaller, manageable parts. This is a good problem-solving strategy in programming.
-   - Real-World Application: Calculating the area and circumference of a circle is a simple but relatable real-world problem. This helps to make the exercise more engaging.
+   - Pay attention to the different outputs produced by each type of if statement.
+   - Notice how the nested if and the multi-way if-else chain achieve a similar grading result but use different logic structures.
 
    **Java Programming Best Practices:**
-   - Combining Concepts: This exercise is great because it combines several key Java concepts: variable declaration, input/output, arithmetic expressions, operator precedence, type casting (if needed), and using the Math API. This is how real-world programming works!
-   - Meaningful Variable Names: Use descriptive names like radius, area, and circumference.
-   - Comments: Explain what each section of your code does.
-   - Close the Scanner: Always close the Scanner object (input.close()) when you're finished with it to release system resources.
-   - Formatted Output: Use System.out.printf() for nicely formatted output, especially when dealing with numbers and decimals. The %.2f format specifier is very useful for displaying numbers with two decimal places.
-   - Appropriate Data Types: Use double for calculations involving potentially fractional values like radius, area, and circumference.
-   - Math.PI and Math.pow(): Use Math.PI for the value of pi and Math.pow() for raising a number to a power. These are more accurate and efficient than trying to define these yourself.
+   - Use descriptive variable names.
+   - Comment your code to explain the logic of the if statements.
+   - Indent your code properly to clearly show the code blocks within the if, else, and nested structures.
       
    **Step-by-Step Instructions:**
 
-   1. Import the Scanner Class
-      - Create a file named `CircleCalculator.java`.
-      - At the very top of your file (before the class declaration), import the `Scanner` class.  This allows you to get input from the user.
+   1. Setup Class and Main Method
+      - Create a file named `SelectionStatementsDemo.java`.
+      - Define the class `SelectionStatementsDemo` and its `main` method.
       ```Java
-      import java.util.Scanner;
-      ```
-      
-   2. Class and Main Method
-      - Define the class `CircleCalculator` and its main method.
-      ```Java
-      public class CircleCalculator {
+      public class SelectionStatementsDemo {
           public static void main(String[] args) {
       
           }
       }
       ```
             
-   3. Create a Scanner Object
-      - Inside the `main` method, create a `Scanner` object.  This object will be used to read user input from the console.
+   2. Declare Boolean Variables
+      - Inside the main method, declare an integer variable named studentScore and initialize it to 82.
       ```Java
-      Scanner input = new Scanner(System.in);
+      int studentScore = 82;
       ```
 
-   4. Prompt for Radius
-      - Use `System.out.print()` to prompt the user to enter the radius of the circle.
+   3. One-Way if Statement (Passing)
+      - Write a one-way if statement. The condition should check if studentScore is greater than or equal to 60.
+      - Inside the if block, print "You passed the exam!".
       ```Java
-      System.out.print("Enter the radius of the circle: ");
+      if (studentScore >= 60) {
+         System.out.println("You passed the exam!");
+      }
       ```
 
-   5. Read Radius Input
-      - Use the `nextDouble()` method of your `Scanner` object to read the radius (which can be a decimal) and store it in a double variable named `radius`.
+   4. Two-Way if-else Statement (Basic Feedback)
+      - Write a two-way if-else statement. The condition should check if studentScore is greater than or equal to 90.
+      - Inside the if block, print "Excellent performance!".
+      - Inside the else block, print "Keep improving!".
       ```Java
-      double radius = input.nextDouble();
+      if (studentScore >= 90) {
+         System.out.println("Excellent performance!");
+      } else {
+         System.out.println("Keep improving!");
+      }
       ```
 
-   6. Calculate Area
-      - Declare a double variable named `area`.
-      - Calculate the area of the circle using the formula: Area = π * r^2.  Use `Math.PI` for π and `Math.pow(radius, 2)` for r^2. Store the result in `area`.
+   5. Nested if Statements (Detailed Grading)
+      - Write a nested if structure. The outer if should check if studentScore is greater than or equal to 60.
+      - Inside the outer if block:
+         - Write another if to check if studentScore is greater than or equal to 90. If so, print "Grade: A".
+         - Write an else block (still inside the outer if). Inside this else:
+            - Write another if to check if studentScore is greater than or equal to 75. If so, print "Grade: B".
+            - Write another else block (inside the previous else). Inside this one:
+               - Print "Grade: C".
+      - Write an else block for the very first (outer) if. Inside this else, - print "Grade: F".
       ```Java
-      double area = Math.PI * Math.pow(radius, 2);
+      if (studentScore >= 60) {
+         if (studentScore >= 90) {
+            System.out.println("Grade: A");
+         } else {
+            if (studentScore >= 75) {
+                  System.out.println("Grade: B");
+            } else {
+                  System.out.println("Grade: C");
+            }
+         }
+      } else {
+         System.out.println("Grade: F");
+      }
       ```
 
-   7. Calculate Circumference
-      - Declare a double variable named `circumference`.
-      - Calculate the circumference of the circle using the formula: Circumference = 2 * π * r. Store the result in `circumference`.
+   6. Multi-way if-else Chain (Alternative Grading)
+      - Write a multi-way if-else chain.
+      - The first if should check if studentScore is greater than or equal to 90. If so, print "Multi-way Grade: A".
+      - The next else if should check if studentScore is greater than or equal to 80. If so, print "Multi-way Grade: B".
+      - The next else if should check if studentScore is greater than or equal to 70. If so, print "Multi-way Grade: C".
+      - The next else if should check if studentScore is greater than or equal to 60. If so, print "Multi-way Grade: D".
+      - The final else block should print "Multi-way Grade: F".
       ```Java
-      double circumference = 2 * Math.PI * radius;
+      if (studentScore >= 90) {
+         System.out.println("Multi-way Grade: A");
+      } else if (studentScore >= 80) {
+         System.out.println("Multi-way Grade: B");
+      } else if (studentScore >= 70) {
+         System.out.println("Multi-way Grade: C");
+      } else if (studentScore >= 60) {
+         System.out.println("Multi-way Grade: D");
+      } else {
+         System.out.println("Multi-way Grade: F");
+      }
       ```
 
-   8. Output Results (Formatted)
-      - Use `System.out.printf()` to print the `radius`, `area`, and `circumference`.  Format the output to two decimal places using `%.2f`.  Include descriptive labels.  `%n` creates a new line.
-      ```Java
-      System.out.printf("Radius: %.2f%n", radius);
-      System.out.printf("Area: %.2f%n", area);
-      System.out.printf("Circumference: %.2f%n", circumference);
-      ```
+   7. Compile and Run
+       - Save the file as `SelectionStatementsDemo.java`.
+       - Compile the code using `javac SelectionStatementsDemo.java` in your terminal or command prompt.
+       - Run the compiled code using `java SelectionStatementsDemo`.
 
-   9. Demonstrate Operator Precedence
-      - Close the `Scanner` object to release resources.
-      ```Java
-      input.close();
-      ```
-
-   10. Compile and Run
-       - Save the file as `CircleCalculator.java`.
-       - Compile the code using `javac CircleCalculator.java` in your terminal or command prompt.
-       - Run the compiled code using `java CircleCalculator`.
+   **Conclusion**
+   This exercise demonstrates the different forms of selection control flow in Java: one-way if, two-way if-else, nested if, and multi-way if-else.  These structures are essential for creating programs that make decisions based on different conditions.  Understanding when to use each type of if statement allows you to write more efficient and readable code.  Always prioritize code clarity through proper indentation and comments.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
@@ -195,7 +211,7 @@ Once you've completed your changes, follow these steps to upload your work to yo
    Write a meaningful commit message:
    
    ```bash
-   git commit -m "Submitting OBJPROG Week 02 - Session 01 - Exercise 05"
+   git commit -m "Submitting OBJPROG Week 04 - Session 01 - Exercise 01"
    ```
    
 4. Push your changes to GitHub:
