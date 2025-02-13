@@ -84,7 +84,7 @@ Only perform this if this is the first time you will setup your Git Environment
    - Practice one-way if, two-way if-else, nested if, and multi-way if-else statements.
 
    **File Naming Convention:**
-   - `BooleanExpressionsDemo.java`
+   - `SelectionStatementsDemo.java`
 
    **Desired Output (with score = 82):**
    ```txt
@@ -219,7 +219,7 @@ Once you've completed your changes, follow these steps to upload your work to yo
    Write a meaningful commit message:
    
    ```bash
-   git commit -m "Submitting OBJPROG Week 04 - Session 01 - Exercise 01"
+   git commit -m "Submitting OBJPROG Week 04 - Session 01 - Exercise 02"
    ```
    
 4. Push your changes to GitHub:
