@@ -1,3 +1,4 @@
-Enter the radius of the circle: Radius: 5.00
-Area: 78.54
-Circumference: 31.42
+You passed the exam!
+Keep improving!
+Grade: B
+Multi-way Grade: B
